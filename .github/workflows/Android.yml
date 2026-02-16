@@ -31,6 +31,7 @@ jobs:
           haxelib setup ~/haxelib
           haxelib install hxcpp > /dev/null
           haxelib install hxpkg --global
+          haxelib run hxpkg setup --global
           haxelib run lime rebuild hxcpp --quiet
       - name: Configure Android
         run: |
