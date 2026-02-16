@@ -28,7 +28,7 @@ jobs:
             cache-android-night 
       - name: Install Libraries
         run: |
-          haxelib setup .haxelib
+          haxelib setup --force .haxelib
           haxelib install hxpkg --global || true
           haxelib dev hxpkg $(haxelib libpath hxpkg | grep -v "Searching")
           haxelib run hxpkg setup --global
