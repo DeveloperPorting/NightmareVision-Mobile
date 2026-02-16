@@ -65,7 +65,12 @@
 				"name": "haxeui-core",
 				"link": "https://github.com/haxeui/haxeui-core.git",
 				"branch": "99d5d035e7120ce027256b117a25625c53b488dc"
-			}
+			},
+			{
+	 	      "name": "extension-androidtools",
+	           "link": "https://github.com/MAJigsaw77/extension-androidtools",
+	 	      "branch": "main"
+		    }
 		]
 	}
 ]
