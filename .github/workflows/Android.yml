@@ -46,7 +46,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Nightmare-Android
-          path: export/release/android/bin/app/build/outputs/apk/release/*.apk
+          path: export/release/android/bin/app/build/outputs/apk/*
           if-no-files-found: error
 
       - name: Clearing already existing cache
