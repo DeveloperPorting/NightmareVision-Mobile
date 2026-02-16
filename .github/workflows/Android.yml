@@ -32,7 +32,7 @@ jobs:
           haxelib install hxcpp > /dev/null
           haxelib install hxpkg --global
           haxelib run hxpkg setup --global
-          haxelib hxpkg install
+          haxelib run hxpkg install
           haxelib list
       - name: Configure Android
         run: |
