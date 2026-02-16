@@ -28,12 +28,13 @@ jobs:
             cache-android-night 
       - name: Install Libraries
         run: |
-		  haxelib setup ~/haxelib-repo
-		  haxelib install hxpkg --global || true
-		  haxelib dev hxpkg $(haxelib libpath hxpkg | hosts)
-		  haxelib run hxpkg setup --global
-		  haxelib run hxpkg install
+          haxelib setup .haxelib
+          haxelib install hxpkg --global || true
+          haxelib dev hxpkg $(haxelib libpath hxpkg | grep -v "Searching")
+          haxelib run hxpkg setup --global
+          haxelib run hxpkg install
           haxelib run lime rebuild hxcpp --quiet
+
       - name: Configure Android
         run: |
           haxelib run lime setup android
